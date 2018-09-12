@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>Google Map Application</title>
+<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+<meta name="theme-color" content="#000000">
+<link rel="stylesheet" type="text/css" href="styles.css">
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+</head>
+
+<body>
+  
+<div id="header"><h2>React Google Map Application</h2></div><!-- header -->
+<div id="container">  
+
+	<div class="left">
+    	
+        <div class="legend_hldr">
+          <h2>Legend</h2>
+          <table width="270px">
+          <tbody>
+          <tr>
+            <td>&nbsp;</td>
+            <td class="hd">Hemisphere</td>
+            <td class="hd">Count</td>
+          </tr>
+            <tr>
+              <td class="check"><input type="checkbox" id="neVisible" checked/></td>
+              <td class="ne">Northeast</td>
+              <td class="count"><span id="northeast"></span></td>
+            </tr>
+            <tr>
+              <td class="check"><input type="checkbox" id="seVisible" checked /></td>
+              <td class="se">Southeast</td>
+              <td class="count"><span id="southeast"></span></td>
+            </tr>
+            <tr>
+              <td class="check"><input type="checkbox" id="nwVisible" checked /></td>
+              <td class="nw">Northwest</td>
+              <td class="count"><span id="northwest"></span></td>
+            </tr>
+            <tr>
+              <td class="check"><input type="checkbox" id="swVisible" checked /></td>
+              <td class="sw">Southwest</td>
+              <td class="count"><span id="southwest"></span></td>
+            </tr>
+          </tbody>
+        </table>
+        
+        <button onClick="refreshPage();">Reload Page</button>          
+          
+        </div><!-- legend_hldr -->
+    
+    </div><!-- left -->
+    
+    <div class="right">
+    	<div id="map"></div> 
+        <script async defer
+    src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBFipmDMgGgJcAWWnGE9q1daJeqQf3dbrM&callback=initMap" type='text/javascript'>
+    </script> 
+        <script type='text/javascript' src="map.js"></script>	
+		
+</script>  
+  </body>
+</html>
