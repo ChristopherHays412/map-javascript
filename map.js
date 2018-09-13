@@ -99,109 +99,86 @@
 		  }		  
 		}
 		
+		
+		// Function for Hiding Markers
+		
+		function toggleHidden() {
+			for (i = 0; i < markers.length; i++) {
+				marker = markers[i];					
+				if (marker.category == category) {
+					  marker.setVisible(false);					  
+				} else {
+					  null;
+				}
+			 }				
+		}				
+		
+		function toggleVisible() {
+			for (i = 0; i < markers.length; i++) {
+				marker = markers[i];					
+				if (marker.category == category) {
+					  marker.setVisible(true);					  
+				} else {
+					  null;
+				}
+			 }				
+		}						
+		
+
 		// Checkbox function for Northeast quadrant
 		
-		$('#neVisible').change(function(category) {			
-			if (this.checked) {
-				 for (i = 0; i < markers.length; i++) {
-					marker = markers[i];					
-					if (marker.category == "northeast" || marker.category == "southeast" || marker.category == "northwest" || marker.category == "southwest") {
-					  marker.setVisible(true);
-					}					
-					else {
-					  marker.setVisible(false);
-					}
-				  }							 				 
-			} else {				
-				  for (i = 0; i < markers.length; i++) {
-					marker = markers[i];					
-					if (marker.category == "northeast") {
-					  marker.setVisible(false);
-					}					
-					else {
-					  marker.setVisible(true);
-					}
-				  }								
+		$( "#neVisible" ).change(function() {
+			if (this.checked) {	
+				category = "northeast";
+				toggleVisible();					
+			} else {
+				// Make the northeast markers invisible
+				category = "northeast";
+				toggleHidden();						
 			}
 		});
 		
 		// Checkbox function for Southeast quadrant
 		
-		$('#seVisible').change(function(category) {			 
-			if (this.checked) {
-				 for (i = 0; i < markers.length; i++) {
-					marker = markers[i];					
-					if (marker.category == "northeast" || marker.category == "southeast" || marker.category == "northwest" || marker.category == "southwest") {
-					  marker.setVisible(true);
-					}					
-					else {
-					  marker.setVisible(false);
-					}
-				  }							 				 
-			} else {				
-				  for (i = 0; i < markers.length; i++) {
-					marker = markers[i];					
-					if (marker.category == "southeast") {
-					  marker.setVisible(false);					  
-					}					
-					else {
-					  marker.setVisible(true);
-					}
-				  }								
+		$( "#seVisible" ).change(function() {
+			if (this.checked) {	
+				category = "southeast";
+				toggleVisible();					
+			} else {
+				// Make the northeast markers invisible
+				category = "southeast";
+				toggleHidden();						
 			}
 		});
 		
-		// Checkbox function for Northwest quadrant
+		// Checkbox function for Southeast quadrant
 		
-		$('#nwVisible').change(function(category) {			
-			if (this.checked) {
-				 for (i = 0; i < markers.length; i++) {
-					marker = markers[i];					
-					if (marker.category == "northeast" || marker.category == "southeast" || marker.category == "northwest" || marker.category == "southwest") {
-					  marker.setVisible(true);
-					}					
-					else {
-					  marker.setVisible(false);
-					}
-				  }							 				 
-			} else {				
-				  for (i = 0; i < markers.length; i++) {
-					marker = markers[i];					
-					if (marker.category == "northwest") {
-					  marker.setVisible(false);					  
-					}					
-					else {
-					  marker.setVisible(true);
-					}
-				  }								
+		$( "#nwVisible" ).change(function() {
+			if (this.checked) {	
+				category = "northwest";
+				toggleVisible();					
+			} else {
+				// Make the northeast markers invisible
+				category = "northwest";
+				toggleHidden();						
 			}
 		});
 		
-		// Checkbox function for Northwest quadrant
+		// Checkbox function for Southeast quadrant
 		
-		$('#swVisible').change(function(category) {			  
-			if (this.checked) {
-				 for (i = 0; i < markers.length; i++) {
-					marker = markers[i];					
-					if (marker.category == "northeast" || marker.category == "southeast" || marker.category == "northwest" || marker.category == "southwest") {
-					  marker.setVisible(true);
-					}					
-					else {
-					  marker.setVisible(false);
-					}
-				  }							 				 
-			} else {				
-				  for (i = 0; i < markers.length; i++) {
-					marker = markers[i];					
-					if (marker.category == "southwest") {
-					  marker.setVisible(false);					  
-					}					
-					else {
-					  marker.setVisible(true);
-					}
-				  }								
+		$( "#swVisible" ).change(function() {
+			if (this.checked) {	
+				category = "southwest";
+				toggleVisible();					
+			} else {
+				// Make the northeast markers invisible
+				category = "southwest";
+				toggleHidden();						
 			}
 		});
+		
+		
+		
 		
 		// Page refresh function		
 		
